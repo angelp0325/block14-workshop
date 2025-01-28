@@ -99,7 +99,7 @@ function describeNumbers(numbers) {
 
 const userInputString = prompt(
   "Please enter some integers separated by commas.",
-  "1,2,3,4,5"
+  "28,-15,30,975,400"
 );
 const numbers = convertStringToNumbers(userInputString);
 describeNumbers(numbers);
