@@ -13,7 +13,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
-  return numbers.reduce((sum, num) => sum + num, 0);
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
 }
 
 /**
@@ -32,7 +36,13 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
-  return Math.min(...numbers);
+  let min = numbers[0];
+  for (const num of numbers) {
+    if (num < min) {
+      min = num;
+    }
+  }
+  return min;
 }
 
 /**
@@ -41,7 +51,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
-  return Math.max(...numbers);
+  let max = numbers[0];
+  for (const num of numbers) {
+    if (num > max) {
+      max = num;
+    }
+  }
+  return max;
 }
 
 /**
@@ -59,7 +75,13 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
-  return numbers.filter((num) => num % 2 === 0);
+  const evens = [];
+  for (const num of numbers) {
+    if (num % 2 === 0) {
+      evens.push(num);
+    }
+  }
+  return evens;
 }
 
 /**
@@ -68,7 +90,13 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
-  return numbers.filter((num) => num % 2 !== 0);
+  const odds = [];
+  for (const num of numbers) {
+    if (num % 2 !== 0) {
+      odds.push(num);
+    }
+  }
+  return odds;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
